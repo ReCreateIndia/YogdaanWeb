@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container">
+    <div class="ui huge header">User Information</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+                <div class="item">
+                    <div class="image" style="height: 300px; width: 300px; padding-top: 2.5em;">
+                        <img src="<%= response.Image %>">
+                    </div>
+                    <div class="content" style="text-align: center; padding: 4em;">
+                        <span class="header">Name: <%= response.Name %></span>
+                        <div class="meta">
+                            <span>Phone: <%= response.Phone %></span>
+                        </div>
+                        <div class="description">
+                            <p>Address: <%= response.Address %></p>
+                        </div>
+                        <div class="description">
+                            <p>Request: <%= response.Request %></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

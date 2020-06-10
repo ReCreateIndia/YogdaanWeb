@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container">
+    <div class="ui huge header">Requests</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+                <div class="table">
+                    <table border="2" class="table ui blue table">
+                        <thead>
+                            <tr>
+                                <th class="row1">State</th>
+                                <th class="row2">City</th>
+                                <th class="row3">Day</th>
+                                <th class="row4">Request</th>
+                                <th class="row5">Query</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% response.forEach(function(quest){ %>
+                            <tr>
+                                <td><%= quest.State %></td>
+                                <td><%= quest.City %></td>
+                                <td><%= quest.Day %></td>
+                                <td><a href="/request/show/<%= quest.id %>"><%= quest.Request %></a></td>
+                                <td id="btn" style="position: relative;">
+                                    <a href="/request/delete/<%= quest.id %>"><button type="submit" id="cross1" class="ui red button"></button></a>
+                                    <a href="#"><button type="submit" id="cross2" class="ui green button"></button></a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer") %>

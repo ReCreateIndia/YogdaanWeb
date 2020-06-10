@@ -1,0 +1,33 @@
+i.icon{
+    font-size: 1.5em;
+}
+.container.main{
+    margin-top: 6.0em;
+}
+#delete{
+    display: inline;
+}
+
+
+#cross1{
+    border-radius: 50%;
+}
+#cross2{
+    border-radius: 50%;
+    
+}
+.row1{
+    width: 21%;
+}
+.row2{
+    width: 16%;
+}
+.row3{
+    width: 7%;
+}
+.row4{
+    width: 38%;
+}
+.row5{
+    width: 18%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yogdaan</title>
+        <link rel="shortcut icon" type="image/png" href="./media/favicon.jpg">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+            
+            <!-- MATERIAL DESIGN ICONIC FONT -->
+        <link rel="stylesheet" href="/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+                
+                <!-- STYLE CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+    </head>
+        <body>
+            <div class="wrapper" style="background-image: url('/media/loginback.jpg')">
+
+                <div class="inner">
+                    <div class="image-holder" style="padding-top: 2em;">
+                        <img src="/media/login.jpg">
+                    </div>
+
+                    <form action="">
+                        <h3>Login</h3>
+                        <div class="form-wrapper">
+                            <input id="email" type="email" placeholder="Email Address" class="form-control">
+                            <i class="zmdi zmdi-email"></i>
+                        </div>
+                    
+                    
+                        <div class="form-wrapper">
+                            <input id="password" type="password" placeholder="Password" class="form-control">
+                            
+                        </div>
+                        
+                        <h4 id="final" style="text-align: center;"></h4>
+                            <div class="form-group container-login100-form-btn">
+                                <button id="btn-login" type="button">
+                                    Login
+                                    <i class="zmdi zmdi-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="w-full text-centre p-t-27 p-b-239" >
+                                <span class="text-muted">
+                                    Forgot
+                                </span>
+                                <a href="/forgot" class="text-dark">
+                                    user name / password?
+                                </a>
+                            </div>
+        
+                    </form>
+
+                </div>
+                
+            </div>
+    
+
+            <script src="/js/index.js"></script>
+            
+        </body>
+</html>

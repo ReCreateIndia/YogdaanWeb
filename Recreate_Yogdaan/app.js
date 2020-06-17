@@ -33,7 +33,7 @@ app.get("/forgot", function(req, res){
 
 //GET ALL BLOGS FROM DATABASE AND RENDER TO FRONT END
 app.get("/blogs", function(req, res){
-    db.collection('Blogs').get().then((snapshot) => {
+    db.collection('OurWorkPost').get().then((snapshot) => {
         var blogs = [];
         snapshot.docs.forEach(doc => {
             const selectedBlog = {
@@ -55,7 +55,7 @@ app.get('/blogs/show/:id', (req, res) => {
 
         try
         {
-            const document = db.collection('Blogs').doc(req.params.id);
+            const document = db.collection('OurWorkPost').doc(req.params.id);
             let product = await document.get();
             let blog = product.data();
 
@@ -155,7 +155,7 @@ app.post('/blogs', (req, res) => {
 	(async () => {
 		try {
 			await db
-				.collection('Blogs')
+				.collection('OurWorkPost')
 				.doc()
 				.create({
                     title: req.body.blog.title,

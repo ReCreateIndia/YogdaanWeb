@@ -1,8 +1,5 @@
-i.icon{
-    font-size: 1.5em;
-}
 .container.main{
-    margin-top: 6.0em;
+    margin-top: 3.0em;
 }
 #delete{
     display: inline;
@@ -14,7 +11,9 @@ i.icon{
 }
 #cross2{
     border-radius: 50%;
-    
+}
+#cross3{
+    border-radius: 50%;
 }
 .row1{
     width: 21%;

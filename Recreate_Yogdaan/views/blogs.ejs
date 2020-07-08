@@ -1,7 +1,33 @@
 <%- include("partials/header") %>
+<style>
+    body{
+        background-color: #e6ffff;
+    }
+</style>
+<div style="padding-top: 1em; margin-left: 34em;">
+    <button class="ui blue button" id="btn1" onclick="document.getElementById('para1').style.display='none';
+                                                                     document.body.style.backgroundColor = '#f2f2f2';
+                                                                     document.getElementById('para2').style.display='block';
+                                                                     document.getElementById('btn1').style.display='none';
+                                                                     document.getElementById('btn2').style.display='block';
+                                                                     " style="font-weight:900;"> Our Work </button>
 
-<div class="ui main text container">
-    <div class="ui huge header">Blogs</div>
+
+    <button class="ui teal button" id="btn2" onclick="document.getElementById('para2').style.display='none';
+                                                                      document.body.style.backgroundColor = '#e6ffff';
+                                                                      document.getElementById('para1').style.display='block';
+                                                                      document.getElementById('btn2').style.display='none';
+                                                                      document.getElementById('btn1').style.display='block';
+                                                                      " style="font-weight:900;display:none"> Fund Raise </button>
+
+</div>
+<div class="ui main text container" id="para1">
+    <div class="ui huge header">Fund Raise Blogs</div>
+    <h1 style="text-align: center;">Coming Soon</h1>
+            <hr>
+</div>
+<div class="ui main text container" id="para2" style="display:none">
+    <div class="ui huge header">Our Work Blogs</div>
     <div class="ui top attached segment">
         <div class="ui divided items">
             <% blogs.forEach(function(blog){ %>
@@ -27,6 +53,7 @@
                 </div>
             <% }) %>
         </div>
+        
     </div>
 </div>
 

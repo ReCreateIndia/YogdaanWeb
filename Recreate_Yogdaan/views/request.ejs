@@ -1,5 +1,15 @@
 <%- include("partials/header") %>
-
+<a class="ui teal button" style="float: left; margin: 2em;">Donation</a>
+<div class="dropdown" style="float: right; margin: 2em;">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Type of work
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% response.forEach(function(quest){ %>
+            <a class="dropdown-item" href="#"><%= quest.Type %></a>
+        <% }) %>
+    </div>
+</div>
 <div class="ui main text container">
     <div class="ui huge header">Requests</div>
     <div class="ui top attached segment">

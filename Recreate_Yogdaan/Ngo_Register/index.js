@@ -10,18 +10,29 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
   firebase.auth.Auth.Persistence.LOCAL
   $("#btn-signup").click(function()
   {
       var email = $("#email").val();
       var password = $("#password").val();
-      console.log(email,password,"----");
       if(email != "" && password != "")
     {
         console.log("inside");
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
             document.getElementById("reg").textContent="Registering";
             console.log('hit finally');
+            //SAVING DATA
+            const form = document.querySelector('#formReg');
+            db.collection('CollectionNgo').doc(document.getElementById('email').value).set({
+                Name: document.getElementById('Name').value,
+                Number: document.getElementById('Phone number').value,
+                Userid: document.getElementById('email').value,
+                City: document.getElementById('City').value,
+                State: document.getElementById('State').value,
+                Work: document.getElementById('Field of Work').value
+            });
+            
             window.location.href = "#";
             document.getElementById("reg").textContent="";
         }).catch(function(error)

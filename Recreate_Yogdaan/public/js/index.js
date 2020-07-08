@@ -10,7 +10,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.auth.Auth.Persistence.LOCAL
-  $("#btn-login").click(function()
+  function SeedDB()
   {
       var email = $("#email").val();
       var password = $("#password").val();
@@ -20,7 +20,9 @@ var firebaseConfig = {
         console.log("inside");
         firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
             console.log('hit finally');
+            console.log(firebase.auth().currentUser);
             window.location.href = "/request";
+            
         }).catch(function(error)
         {
             document.getElementById("final").textContent = "Wrong Credential";
@@ -38,7 +40,7 @@ var firebaseConfig = {
     {
         window.alert("Form is incomplete . Please fill out all fields.");
     }
-  });
+  }
   
   $("#btn-resetPassword").click(function()
   {
@@ -69,12 +71,3 @@ var firebaseConfig = {
       }
   });
 
-
-
-  $("#btn-logout").click(function()
-  {
-     firebase.auth().signOut();  
-  });
-
-
-  

@@ -30,10 +30,10 @@
                         <img src="/media/login.jpg">
                     </div>
 
-                    <form action="">
+                    <form action="" method="POST">
                         <h3>Login</h3>
                         <div class="form-wrapper">
-                            <input id="email" type="email" placeholder="Email Address" class="form-control">
+                            <input id="email" name="email" type="email" placeholder="Email Address" class="form-control">
                             <i class="zmdi zmdi-email"></i>
                         </div>
                     
@@ -45,7 +45,7 @@
                         
                         <h4 id="final" style="text-align: center;"></h4>
                             <div class="form-group container-login100-form-btn">
-                                <button id="btn-login" type="button">
+                                <button id="btn-login" type="submit" onclick="SeedDB();">
                                     Login
                                     <i class="zmdi zmdi-arrow-right"></i>
                                 </button>

@@ -16,17 +16,27 @@
     border-radius: 50%;
 }
 .row1{
-    width: 21%;
+    width: 19%;
 }
 .row2{
     width: 16%;
 }
 .row3{
-    width: 7%;
+    width: 5%;
 }
 .row4{
-    width: 38%;
+    width: 30%;
 }
 .row5{
-    width: 18%;
+    width: 30%;
 }
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  
